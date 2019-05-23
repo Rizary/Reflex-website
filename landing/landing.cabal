@@ -1,0 +1,27 @@
+cabal-version:       2.4
+
+name:                landing
+version:             0.1.0.0
+synopsis:            landing page for website
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Rizary
+maintainer:          noone@gmail.com
+category:            Web
+extra-source-files:    CHANGELOG.md
+                     , README.md
+
+executable landing
+  main-is:             Main.hs
+  other-modules:
+    Types
+  cpp-options: -DGHCJS_BROWSER
+  ghc-options: -Wall
+  build-depends:     , base ^>=4.9.1.0 || ^>= 4.11.1.0
+                     , reflex
+                     , reflex-dom
+                     , text
+                     , containers
+                     , aeson
+  hs-source-dirs:      src
+  default-language:    Haskell2010
